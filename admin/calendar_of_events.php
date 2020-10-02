@@ -1,0 +1,37 @@
+<?php  include('header.php'); ?>
+<?php  include('session.php'); ?>
+    <body style="background-image: linear-gradient(to top,#cfd9df,#e2ebf0)">
+		<?php include('navbar.php') ?>
+        <div class="container-fluid">
+            <div class="row-fluid">
+					<?php include('sidebar_calendar.php'); ?>
+                
+                <!--/span-->
+                <div class="span9" id="content" style="margin-left: 25px;">
+								        <div id="block_bg" class="block">
+                
+								<div class="block-content collapse in" style="box-shadow: none;">
+										<div class="span8"style="box-shadow: none;">
+							<!-- block -->
+										<div class="navbar navbar-inner block-header">
+											<div class="muted pull-left">Calendar</div>
+										</div>
+															<div id='calendar'></div>		
+										</div>
+										
+										<div class="span4">
+												<?php include('add_class_event.php'); ?>
+										</div>	
+							<!-- block -->
+						
+										</div>
+                                </div>		
+                </div>
+            </div>
+
+        </div>
+	<?php include('script.php'); ?>
+	<?php include('admin_calendar_script.php'); ?>
+    </body>
+
+</html>
