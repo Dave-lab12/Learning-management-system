@@ -3,7 +3,7 @@
 the main purpose of this project is to manage student and teacher learning environment 
 it contains three actors
 
-**👨‍🎓student**<br />
+**<h1>👨‍🎓student**</h1><br />
 💪view class<br />
 💪upload assignment<br />
 💪view downloadable materials<br />
