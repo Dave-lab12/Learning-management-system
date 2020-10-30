@@ -6,25 +6,25 @@ it contains three actors
 **👨‍🎓student**<br />
 💪view class<br />
 💪upload assignment<br />
-💪view downloadable materials<br /><br />
+💪view downloadable materials<br />
 💪view assignment grades<br />
 💪message to teachers and other students<br />
-👩‍🏫Teacher<br />
+**👩‍🏫Teacher**<br />
 💪manage students<br />
 💪send message to  teachers and students<br />
 💪send downloadable materials<br />
 💪send assignments<br />
 💪give grades<br />
-👷‍♂️Admin<br />
+**👷‍♂️Admin<br />**
 💪add student<br />
 💪add teacher<br />
 💪manage student and teacher account<br />
 💪view all teacher uploads <br />
-💥Top-features <br />
+**💥Top-features <br />**
 💪reset password  using php mailer<br />
 💪passwords are hashed<br />
 💪immune to xss and sql injection<br />
-➕how to use<br />
+**➕how to use<br />**
 💪install xampp with php 7<br />
 💀php 7.4 is not recommended <br />
 💪copy the files to xampp/htdocs <br />
