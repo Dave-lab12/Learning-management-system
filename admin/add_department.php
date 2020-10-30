@@ -35,8 +35,8 @@
 					
 					<?php
 if (isset($_POST['save'])){
-$pi = $_POST['pi'];
-$d = $_POST['d'];
+$pi = htmlspecialchars( mysqli_real_escape_string($conn,$_POST['pi']));
+$d = htmlspecialchars( mysqli_real_escape_string($conn,$_POST['d']));
 
 
 $query = mysqli_query($conn, "select * from department where department_name = '$d' and dean = '$pi' ")or die(mysqli_error());

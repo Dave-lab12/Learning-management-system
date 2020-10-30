@@ -1,7 +1,7 @@
    <div class="row-fluid">
        <a href="teachers.php" class="btn btn-info"><i class="icon-plus-sign icon-large"></i> Add Teacher</a>
                         <!-- block -->
-                        <div class="block">
+                        <div class="block" style="box-shadow: none;">
                             <div class="navbar navbar-inner block-header">
                                 <div class="muted pull-left">Edit Teacher</div>
                             </div>
@@ -44,7 +44,11 @@
                                             </select>
                                           </div>
                                         </div>
-										
+										<div class="control-group">
+                                          <div class="controls">
+                                            <input class="input focused" value="<?php echo $row['username']; ?>" name="username" id="focusedInput" type="email" placeholder = "email">
+                                          </div>
+                                        </div>
 										<div class="control-group">
                                           <div class="controls">
                                             <input class="input focused" value="<?php echo $row['firstname']; ?>" name="firstname" id="focusedInput" type="text" placeholder = "Firstname">
@@ -75,13 +79,13 @@
 					
 				   <?php
                             if (isset($_POST['update'])) {
-                       
-                                $firstname = $_POST['firstname'];
-                                $lastname = $_POST['lastname'];
-                                $department_id = $_POST['department'];
+                                $username = htmlspecialchars( mysqli_real_escape_string($conn,$_POST['username']));
+                                $firstname = htmlspecialchars( mysqli_real_escape_string($conn,$_POST['firstname']));
+                                $lastname = htmlspecialchars( mysqli_real_escape_string($conn,$_POST['lastname']));
+                                $department_id = htmlspecialchars( mysqli_real_escape_string($conn,$_POST['department']));
 								
 								
-								$query = mysqli_query($conn, "select * from teacher where firstname = '$firstname' and lastname = '$lastname' ")or die(mysqli_error());
+								$query = mysqli_query($conn, "select * from teacher where  firstname = '$firstname' and lastname = '$lastname' ")or die(mysqli_error());
 								$count = mysqli_num_rows($query);
 								
 								if ($count > 1){ ?>
@@ -91,7 +95,7 @@
 								<?php
 								}else{
 								
-								mysqli_query($conn, "update teacher set firstname = '$firstname' , lastname = '$lastname' , department_id = '$department_id' where teacher_id = '$get_id' ")or die(mysqli_error());	
+								mysqli_query($conn, "update teacher set username='$username', firstname = '$firstname' , lastname = '$lastname' , department_id = '$department_id' where teacher_id = '$get_id' ")or die(mysqli_connect_error());	
 								
 								?>
 								<script>

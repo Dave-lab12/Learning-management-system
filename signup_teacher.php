@@ -8,7 +8,7 @@
 	<div class="span6">
 		<div class="pull-right">
 				<?php include('signup_teacher_form.php'); ?>
-		</div>
+	</div>
 	</div>
     </div>
 

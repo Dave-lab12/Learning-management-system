@@ -33,6 +33,10 @@
                                 <div class="span12">
 								<form method="post">
 								<textarea name="content" id="ckeditor_full"></textarea>
+								<script src="ckeditor/ckeditor.js"></script>
+		<script>
+			CKEDITOR.replace("send")
+		</script>
 								<br>
 								<button name="post" class="btn btn-info"><i class="icon-check icon-large"></i> Post</button>
 								</form>

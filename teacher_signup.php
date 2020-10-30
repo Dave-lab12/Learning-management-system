@@ -13,7 +13,8 @@ $id = $row['teacher_id'];
 
 $count = mysqli_num_rows($query);
 if ($count > 0){
-	mysqli_query($conn, "update teacher set username='$username',password = '$password', teacher_status = 'Registered' where teacher_id = '$id'")or die(mysqli_error());
+	$hash= password_hash($password, PASSWORD_BCRYPT);
+	mysqli_query($conn, "update teacher set username='$username',password = '$hash', teacher_status = 'Registered' where teacher_id = '$id'")or die(mysqli_error());
 	$_SESSION['id']=$id;
 	echo 'true';
 }else{

@@ -1,12 +1,12 @@
 <?php include('header_dashboard.php'); ?>
 <?php include('session.php'); ?>
-    <body>
+    <body style="background-image: linear-gradient(to top,#cfd9df,#e2ebf0)">
 		<?php include('navbar_teacher.php'); ?>
         <div class="container-fluid">
             <div class="row-fluid">
 				<?php include('teacher_sidebar.php'); ?>
                 <div class="span6" id="content">
-                     <div class="row-fluid">
+                     <div class="row-fluid" style="margin-left: 25px;">
 					    <!-- breadcrumb -->
 				
 									
@@ -22,7 +22,7 @@
 						 <!-- end breadcrumb -->
 					 
                         <!-- block -->
-                        <div id="block_bg" class="block">
+                        <div id="block_bg" class="block"  style="box-shadow: none;">
                             <div class="navbar navbar-inner block-header">
                                 <div id="" class="muted pull-left"></div>
                             </div>
@@ -57,7 +57,7 @@
                 </div>
 				<?php include('teacher_right_sidebar.php') ?>
             </div>
-		<?php include('footer.php'); ?>
+		
         </div>
 		<?php include('script.php'); ?>
     </body>

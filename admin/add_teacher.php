@@ -63,9 +63,9 @@
 					    <?php
                             if (isset($_POST['save'])) {
                            
-                                $firstname = $_POST['firstname'];
-                                $lastname = $_POST['lastname'];
-                                $department_id = $_POST['department'];
+                                $firstname = htmlspecialchars( mysqli_real_escape_string($conn,$_POST['firstname']));
+                                $lastname = htmlspecialchars( mysqli_real_escape_string($conn,$_POST['lastname']));
+                                $department_id = htmlspecialchars( mysqli_real_escape_string($conn,$_POST['department']));
 								
 								
 								$query = mysqli_query($conn, "select * from teacher where firstname = '$firstname' and lastname = '$lastname' ")or die(mysqli_error());

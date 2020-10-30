@@ -1,7 +1,7 @@
-   <div class="row-fluid">
+   <div class="row-fluid" >
    <a href="admin_user.php" class="btn btn-info"><i class="icon-plus-sign icon-large"></i> Add user</a>
                         <!-- block -->
-                        <div class="block">
+                        <div class="block"style="box-shadow: none;">
                             <div class="navbar navbar-inner block-header">
                                 <div class="muted pull-left">Edit User</div>
                             </div>
@@ -47,9 +47,9 @@
 			<?php		
 if (isset($_POST['update'])){
 
-$firstname = $_POST['firstname'];
-$lastname = $_POST['lastname'];
-$username = $_POST['username'];
+$firstname = htmlspecialchars( mysqli_real_escape_string($conn,$_POST['firstname']));
+$lastname = htmlspecialchars( mysqli_real_escape_string($conn,$_POST['lastname']));
+$username = htmlspecialchars( mysqli_real_escape_string($conn,$_POST['username']));
 
 
 mysqli_query($conn, "update users set username = '$username'  , firstname = '$firstname' , lastname = '$lastname' where user_id = '$get_id' ")or die(mysqli_error());

@@ -26,7 +26,7 @@
 
 		</div>
 		<div  id="b_5_banner5_585729988" class="js-bnfy">
-		<a href="#">	<img id="img_5_banner5_585729988" class="bnfy-enter" alt="Forgot Password?" width="134" height="24" src="../U-learn experimental/admin/assets/student-sign-in/images/forgot-password_687343992.svg"/></a>
+		<a href="stu_requestReset.php">	<img id="img_5_banner5_585729988" class="bnfy-enter" alt="Forgot Password?" width="134" height="24" src="../U-learn experimental/admin/assets/student-sign-in/images/forgot-password_687343992.svg"/></a>
 		</div>
 	
 		<div  id="b_7_banner5_585729988" class="js-bnfy">
@@ -44,9 +44,9 @@
 			<img id="img_13_banner5_585729988" class="bnfy-enter" alt="Sign in to continue to our application" width="298" height="24" src="../U-learn experimental/admin/assets/student-sign-in/images/sign-in-to-continue-to-our-application_755159944.svg"/>
 			<br><br>
 			<label class="field a-field a-field_a3">
-				<input class="field__input a-field__input" type="text" id="username"  name="username" placeholder="Eg. Abebe001" required>
+				<input class="field__input a-field__input" type="email" id="username"  name="username" placeholder="Eg. example@example.com" required>
 				<span class="a-field__label-wrap">
-				  <span class="a-field__label">User Name</span>
+				  <span class="a-field__label">E-mail</span>
 				</span>
 			  </label>
 			<label class="field a-field a-field_a3">
@@ -107,11 +107,11 @@
 									if(html=='true')
 									{
 									$.jGrowl("Loading File Please Wait......", { sticky: true });
-									$.jGrowl("Welcome to Da-viruz School Management System", { header: 'Access Granted' });
+									$.jGrowl("Welcome to U-learn", { header: 'Access Granted' });
 									var delay = 2000;
 										setTimeout(function(){ window.location = 'dasboard_teacher.php'  }, delay);  
 									}else if (html == 'true_student'){
-										$.jGrowl("Welcome to Da-viruz School Management System", { header: 'Access Granted' });
+										$.jGrowl("Welcome to U-learn", { header: 'Access Granted' });
 									var delay = 2000;
 										setTimeout(function(){ window.location = 'student_notification.php'  }, delay);  
 									}else
@@ -124,11 +124,7 @@
 							});
 						});
 						</script>	
-							<div id="button_form" class="form-signin" >
-				<?php
-					$title_query = mysqli_query($conn, "select * from content where title='title'");
-					$title = mysqli_fetch_assoc($title_query);
-				?>
+						
 			
 					<script type="text/javascript">
 					$(document).ready(function(){

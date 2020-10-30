@@ -26,7 +26,8 @@
 								
 										<div class="control-group">
                                           <div class="controls">
-                                            <input name="un" class="input focused" id="focusedInput" type="text" placeholder = "ID Number" required>
+											<input name="un" class="input focused" id="focusedInput" type="email" placeholder = "E-mail" required>
+											
                                           </div>
                                         </div>
 										
@@ -67,7 +68,7 @@
 						url: "save_student.php",
 						data: formData,
 						success: function(html){
-							$.jGrowl("Student Successfully  Added", { header: 'Student Added' });
+							// $.jGrowl("Student Successfully  Added", { header: 'Student Added' });
 							$('#studentTableDiv').load('student_table.php', function(response){
 								$("#studentTableDiv").html(response);
 								$('#example').dataTable( {

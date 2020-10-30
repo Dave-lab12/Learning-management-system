@@ -1,18 +1,18 @@
 <?php include('header.php'); ?>
 <?php include('session.php'); ?>
 <?php $get_id = $_GET['id']; ?>
-    <body>
+    <body style="background-image: linear-gradient(to top,#cfd9df,#e2ebf0)">
 		<?php include('navbar.php'); ?>
         <div class="container-fluid">
             <div class="row-fluid">
 				<?php include('teacher_sidebar.php'); ?>
-				<div class="span3" id="adduser">
+				<div class="span3" id="adduser" style="margin-left: 25px;">
 				<?php include('edit_teacher_form.php'); ?>		   			
 				</div>
                 <div class="span6" id="">
                      <div class="row-fluid">
                         <!-- block -->
-                        <div id="block_bg" class="block">
+                        <div id="block_bg" class="block" style="box-shadow: none;">
                             <div class="navbar navbar-inner block-header">
                                 <div class="muted pull-left">Teacher List</div>
                             </div>

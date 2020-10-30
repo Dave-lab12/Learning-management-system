@@ -1,13 +1,13 @@
 <?php include('header_dashboard.php'); ?>
 <?php include('session.php'); ?>
 <?php $get_id = $_GET['id']; ?>
-    <body>
+    <body style="background-image: linear-gradient(to top,#cfd9df,#e2ebf0)">
 		<?php include('navbar_teacher.php'); ?>
         <div class="container-fluid">
             <div class="row-fluid">
 				<?php include('class_sidebar.php'); ?>
                 <div class="span9" id="content">
-                     <div class="row-fluid">
+                     <div class="row-fluid" style="margin-left: 25px;">
 					     <!-- breadcrumb -->
 				<div class="pull-right">
 							<a href="my_students.php<?php echo '?id='.$get_id; ?>" class="btn btn-info"><i class="icon-arrow-left"></i> Back</a>
@@ -29,7 +29,7 @@
 						 <!-- end breadcrumb -->
 					 
                         <!-- block -->
-                        <div id="block_bg" class="block">
+                        <div id="block_bg" class="block" style="box-shadow: none;">
                             <div class="navbar navbar-inner block-header">
                                 <div id="" class="muted pull-left"></div>
                             </div>

@@ -7,7 +7,7 @@
 				<?php include('title_index.php'); ?>
 		</div>
 	</div>
-	<div class="span6">
+<div class="span6">
 		<div class="pull-right">
 				<?php include('student_signin_form.php'); ?>
 		</div>

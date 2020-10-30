@@ -30,7 +30,7 @@
 						In</span></button>
 			</div>
 			<div id="b_5_banner3_955937359" class="js-bnfy">
-				<a href="#"> <img id="img_5_banner3_955937359" class="bnfy-enter" alt="Forgot Password?" width="134"
+				<a href="teacher_reset.php"> <img id="img_5_banner3_955937359" class="bnfy-enter" alt="Forgot Password?" width="134"
 						height="24"
 						src="../U-learn experimental/admin/assets/Teacher-sign-in/images/forgot-password_683929956.svg" /></a>
 			</div>
@@ -55,10 +55,10 @@
 				<br>
 				<br>
 				<label class="field a-field a-field_a3">
-					<input class="field__input a-field__input" type="text" id="username" name="username"
-						placeholder="Eg. Abebe001" required>
+					<input class="field__input a-field__input" type="email" id="username" name="username"
+						placeholder="Eg. example@example.com" required>
 					<span class="a-field__label-wrap">
-						<span class="a-field__label">User Name</span>
+						<span class="a-field__label">E-mail</span>
 					</span>
 				</label>
 				<label class="field a-field a-field_a3">

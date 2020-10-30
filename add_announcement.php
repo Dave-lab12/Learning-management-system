@@ -35,6 +35,11 @@
 				
 									
 							<textarea name="content" id="ckeditor_full"></textarea>
+						
+							<script src="ckeditor/ckeditor.js"></script>
+		<script>
+			CKEDITOR.replace("send")
+		</script>
                             </div>
                         </div>
 
@@ -138,5 +143,6 @@
 
         </div>
 		<?php include('script.php'); ?>
+		
     </body>
 </html>

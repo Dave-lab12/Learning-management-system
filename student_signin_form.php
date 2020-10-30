@@ -38,9 +38,9 @@
 			<br>
 			<div class="page">
 				<label class="field a-field a-field_a1">
-				  <input class="field__input a-field__input" type="text" id="username" name="username" placeholder="e.g. Abebe001" required>
+				  <input class="field__input a-field__input" type="email" id="username" name="username" placeholder="e.g. example@example.com" required>
 				  <span class="a-field__label-wrap">
-					<span class="a-field__label">ID Number</span>
+					<span class="a-field__label">E-mail</span>
 				  </span>
 				</label>
 				<label class="field a-field a-field_a2">
@@ -52,21 +52,25 @@
 				<label class="field a-field a-field_a3">
 					<input class="field__input a-field__input" type="text" id="lastname" name="lastname" placeholder="e.g. Abebe001" required>
 					<span class="a-field__label-wrap">
-					  <span class="a-field__label">Last Name</span>
+					  <span class="a-field__label">Last Name </span>
 					</span>
 				  </label>
 				  <label class="field a-field a-field_a3">
-					<input class="field__input a-field__input" type="password" id="password" name="password" placeholder=" Type your password" required>
+					<input class="field__input a-field__input" type="password" id="password" name="password" oninput="myFunction()" onkeyup='check();' placeholder=" Type your password" required>
 					<span class="a-field__label-wrap">
 					  <span class="a-field__label">Password</span>
+					 
 					</span>
+					</span><div class="strength" id="length" style="margin-left: 90%;"></div>
 				  </label>
 				  
 				  <label class="field a-field a-field_a3">
-					<input class="field__input a-field__input" type="password" id="cpassword" name="cpassword" placeholder="Re-Type your password" required>
+					<input class="field__input a-field__input" type="password" id="cpassword" name="cpassword" oninput="myFunction()" onkeyup='check();' placeholder="Re-Type your password" required>
 					<span class="a-field__label-wrap">
 					  <span class="a-field__label">Re-type Password</span>
+					  
 					</span>
+					</span><div class="strength" id="lengthr" style="margin-left: 50%;"></div>
 				  </label>
 				<br>
 				<br>
@@ -95,10 +99,10 @@
 		<a href="index.php">	<img id="img_21_banner4_948223658" class="bnfy-enter" alt="Login" width="56" height="26" src="../U-learn experimental/admin/assets/student-sign-up/images/login_171544297.svg"/></a>
 		</div>
 		<div  id="b_22_banner4_948223658" class="js-bnfy">
-		<a href="#">	<img id="img_22_banner4_948223658" class="bnfy-enter" alt="Teacher" width="86" height="28" src="../U-learn experimental/admin/assets/student-sign-up/images/teacher_339841965.svg"/></a>
+		<a href="teacher-sign-in.php">	<img id="img_22_banner4_948223658" class="bnfy-enter" alt="Teacher" width="86" height="28" src="../U-learn experimental/admin/assets/student-sign-up/images/teacher_339841965.svg"/></a>
 		</div>
 		<div  id="b_23_banner4_948223658" class="js-bnfy">
-		<a href="#">	<img id="img_23_banner4_948223658" class="bnfy-enter" alt="Adminstrator" width="132" height="28" src="../U-learn experimental/admin/assets/student-sign-up/images/adminstrator_935578553.svg"/></a>
+		<a href="admin/index.php">	<img id="img_23_banner4_948223658" class="bnfy-enter" alt="Adminstrator" width="132" height="28" src="../U-learn experimental/admin/assets/student-sign-up/images/adminstrator_935578553.svg"/></a>
 		</div>
 		<div  id="b_24_banner4_948223658" class="js-bnfy">
 		<a href="#">	<img id="img_24_banner4_948223658" class="bnfy-enter" alt="Sign Up" width="74" height="26" src="../U-learn experimental/admin/assets/student-sign-up/images/sign-up_802628407.svg"/></a>
@@ -156,8 +160,53 @@
 				});
 			});
 			</script>			
+			<script>
+
+let regExpWeak = /[a-z]/;
+	  let regExpMedium = /\d+/;
+	  let regExpStrong = /.[!,@,#,$,%,^,&,*,?,_,~,-,(,)]/;
+function myFunction() {
+	var valuee = document.getElementById("password").value;
+	var  status =document.getElementById("length");
+	var statuss =document.getElementById("lengthr");
+	var vals = document.getElementById('cpassword').value;
+	if(valuee !=""){
+		if(valuee.length <= 3 && (valuee.match(regExpWeak) || valuee.match(regExpMedium) || valuee.match(regExpStrong)))no=1;
+		if(valuee.length >= 6 && ((valuee.match(regExpWeak) && valuee.match(regExpMedium)) || (valuee.match(regExpMedium) && valuee.match(regExpStrong)) || (valuee.match(regExpWeak) && valuee.match(regExpStrong))))no=2;
+		if(valuee.length >= 6 && valuee.match(regExpWeak) && valuee.match(regExpMedium) && valuee.match(regExpStrong))no=3;
+		
+		if(no == 1){
+			status.textContent ="Weak";
+			status.style.color="red"
+		}
+		if(no == 2){
+			status.textContent ="Medium";
+			status.style.color="orange"
+		}
+		if(no == 3){
+			status.textContent ="Strong";
+			status.style.color="green"
+		}
+		}
 			
-				
+		}	
+		
+function check(){
+	var valuee = document.getElementById("password").value;
+	var  status =document.getElementById("length");
+	var statuss =document.getElementById("lengthr");
+	var vals = document.getElementById('cpassword').value;
+	if(valuee != vals){
+			statuss.textContent ="password does not match";
+			statuss.style.color="red"
+		}else{
+			statuss.textContent ="Match";
+			statuss.style.color="green"
+
+		}
+}
+</script>
+
 			</body>
 			</html>
 					

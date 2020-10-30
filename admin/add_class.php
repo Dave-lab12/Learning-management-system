@@ -1,6 +1,6 @@
    <div class="row-fluid">
                         <!-- block -->
-                        <div class="block">
+                        <div class="block" style="box-shadow: none;">
                             <div class="navbar navbar-inner block-header">
                                 <div class="muted pull-left">Add Class</div>
                             </div>
@@ -27,7 +27,7 @@
                         <!-- /block -->
                     </div><?php
 if (isset($_POST['save'])){
-$class_name = $_POST['class_name'];
+$class_name = htmlspecialchars( mysqli_real_escape_string($conn,$_POST['class_name'])) ;
 
 
 $query = mysqli_query($conn, "select * from class where class_name  =  '$class_name' ")or die(mysqli_error());

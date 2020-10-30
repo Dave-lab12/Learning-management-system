@@ -25,7 +25,7 @@
 		<div  id="b_5_banner2_809869549" class="js-bnfy">
 			<img id="img_5_banner2_809869549" class="bnfy-enter" alt="Rectangle 5" width="1440" height="108" src="admin\assets\teacher-sign-up\images/rectangle-5_196801676.svg"/>
 		</div>
-		
+		<div>
 
 		<div  id="b_12_banner2_809869549" class="js-bnfy">
 			<img id="img_12_banner2_809869549" class="bnfy-enter" alt="SIGN UP" width="92" height="36" src="admin\assets\teacher-sign-up\images/sign-up_397469548.svg"/>
@@ -51,22 +51,27 @@
 				  </span>
 				</label> 
 				<label class="field a-field a-field_a3">
-					<input class="field__input a-field__input" type="text" id="username" name="username"  placeholder="e.g. Abebe001" required>
+					<input class="field__input a-field__input" type="email" id="username" name="username"  placeholder="e.g. example@example.com" required>
 					<span class="a-field__label-wrap">
-					  <span class="a-field__label">User Name</span>
+					  <span class="a-field__label">E-mail</span>
 					</span>
 				  </label>
 				  <label class="field a-field a-field_a3">
-					<input class="field__input a-field__input" type="password" id="password" name="password" placeholder=" Type your password" required>
-					<span class="a-field__label-wrap">
-					  <span class="a-field__label">Password</span>
-					</span>
+					<input class="field__input a-field__input" type="password" id="password" name="password"oninput="myFunction()" onkeyup='check();' placeholder=" Type your password" maxlength="15" required>
+					<span class="a-field__label-wrap" id="rover">
+					  <span class="a-field__label">Password</span> 
+					</span>  
+					
+				  <div class="strength" id="length" style="margin-left: 90%;"></div>
 				  </label>
+				 
+				 
 				  <label class="field a-field a-field_a3">
-					<input class="field__input a-field__input" type="password" id="cpassword" name="cpassword"  placeholder="Re-Type your password" required>
+					<input class="field__input a-field__input" type="password" id="cpassword" name="cpassword" oninput="myFunction()" onkeyup='check();' placeholder="Re-Type your password" required>
 					<span class="a-field__label-wrap">
 					  <span class="a-field__label">Re-type Password</span>
-					</span>
+				  
+					</span><div class="strength" id="lengthr" style="margin-left: 60%;"></div>
 				  </label>
 				<br>
 				<br>
@@ -103,6 +108,7 @@
 		</div>
 		<div  id="b_25_banner2_809869549" class="js-bnfy">
 			<img id="img_25_banner2_809869549" class="bnfy-enter" alt="logo and name" width="186" height="64" src="admin\assets\teacher-sign-up\images/logo-and-name_777113573.svg"/>
+		
 		</div>
 		<div  id="b_26_banner2_809869549" class="js-bnfy">
 			<img id="img_26_banner2_809869549" class="bnfy-enter" alt="logo and name" width="186" height="64" src="admin\assets\teacher-sign-up\images/logo-and-name_764807570.svg"/>
@@ -132,7 +138,7 @@
 						success: function(html){
 						if(html=='true')
 						{
-						$.jGrowl("Welcome to Da-viruz School Management System", { header: 'Sign up Success' });
+						$.jGrowl("Welcome to U-learn", { header: 'Sign up Success' });
 						var delay = 1000;
 							setTimeout(function(){ window.location = 'dasboard_teacher.php'  }, delay);  
 						}else{
@@ -149,6 +155,51 @@
 			});
 			</script>
 
+<script>
+
+	let regExpWeak = /[a-z]/;
+      	let regExpMedium = /\d+/;
+      	let regExpStrong = /.[!,@,#,$,%,^,&,*,?,_,~,-,(,)]/;
+function myFunction() {
+		var valuee = document.getElementById("password").value;
+		var  status =document.getElementById("length");
+	
+		if(valuee !=""){
+			if(valuee.length <= 3 && (valuee.match(regExpWeak) || valuee.match(regExpMedium) || valuee.match(regExpStrong)))no=1;
+			if(valuee.length >= 6 && ((valuee.match(regExpWeak) && valuee.match(regExpMedium)) || (valuee.match(regExpMedium) && valuee.match(regExpStrong)) || (valuee.match(regExpWeak) && valuee.match(regExpStrong))))no=2;
+			if(valuee.length >= 6 && valuee.match(regExpWeak) && valuee.match(regExpMedium) && valuee.match(regExpStrong))no=3;
+			
+			if(no == 1){
+				status.textContent ="Weak";
+				status.style.color="red"
+			}
+			if(no == 2){
+				status.textContent ="Medium";
+				status.style.color="orange"
+			}
+			if(no == 3){
+				status.textContent ="Strong";
+				status.style.color="green"
+			}
+			}
+
+}
+		
+function check(){
+	var valuee = document.getElementById("password").value;
+	var  status =document.getElementById("length");
+	var statuss =document.getElementById("lengthr");
+	var vals = document.getElementById('cpassword').value;
+	if(valuee != vals){
+			statuss.textContent ="password does not match";
+			statuss.style.color="red"
+		}else{
+			statuss.textContent ="Match";
+			statuss.style.color="green"
+
+		}
+}
+</script>
 
 	</body>
 </html>

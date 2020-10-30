@@ -1,6 +1,6 @@
 <?php include('header_dashboard.php'); ?>
 <?php include('session.php'); ?>
-    <body>
+    <body style="background-image: linear-gradient(to top,#cfd9df,#e2ebf0)">
 		<?php include('navbar_student.php'); ?>
         <div class="container-fluid">
             <div class="row-fluid">
@@ -91,7 +91,7 @@
                 </div>
 				<?php include('create_message_student.php') ?>
             </div>
-		<?php include('footer.php'); ?>
+
         </div>
 		<?php include('script.php'); ?>
     </body>

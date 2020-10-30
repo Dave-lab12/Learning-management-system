@@ -1,47 +1,57 @@
 <div class="box-body box-profile pull-right"  >							        	
-	<form method="post" id="">
-		<div class="control-group">
-			<label>User Name:</label>
-	          <div class="controls">
-				<input type="text" name="firstname" value="<?php echo $row['username']; ?>"> 
-	          </div>
-        </div>
+	<form method="post" id="update_info">
+	
 
 		<div class="control-group">
 			<label>First Name:</label>
 	          <div class="controls">
-				<input type="text" name="firstname" value="<?php echo $row['firstname']; ?>"> 
+				<input type="text" name="firstname" id="first" value="<?php echo $row['firstname']; ?>" required> 
 	          </div>
         </div>
 
         <div class="control-group">
 			<label>Last Name:</label>
 	          <div class="controls">
-				<input type="text" name="firstname" value="<?php echo $row['lastname']; ?>"> 
+				<input type="text" name="Lastname" id = "last" value="<?php echo $row['lastname']; ?>" required> 
 	          </div>
         </div>
                                         	
-      	<div class="control-group">
-			<label>Subject:</label>
-			    <div class="controls">
-				    <select name="subject_id"  class="" required>
-					    <option<?php echo $row1['department_id']; ?>><?php echo $row1['department_name']; ?></option>
-							<?php
-								$query2 = mysqli_query($conn, "select * from department order by department_id");
-								while($row2 = mysqli_fetch_array($query2)){
-							?>
-						<option value="<?php echo $row2['department_id']; ?>"><?php echo $row2['department_name']; ?></option>
-							<?php } ?>
-				    </select>
-			    </div>
-    	</div>
+      
 
 		<div class="control-group">
           <div class="controls">
+			  
 				<button name="save" class="btn btn-success btn-block" onclick="comfirm('Are you sure')"><i class="icon-update"></i> Update Profile</button>
           </div>
         </div>
     </form>
+	<script>
+	jQuery(document).ready(function(){
+			jQuery("#update_info").submit(function(e){
+					e.preventDefault();
+						
+						var first = jQuery('#first').val();
+						var last = jQuery('#last').val();
+					var formData = jQuery(this).serialize();
+					$.ajax({
+						type: "POST",
+						url: "update_teacher_info.php",
+						data: formData,
+						success: function(html){
+					
+						$.jGrowl("Profile is sucessfully updated", { header: 'Change profile Success' });
+						var delay = 2000;
+							setTimeout(function(){ window.location = 'profile_teacher.php'  }, delay);  
+						
+						}
+						
+						
+					});
+			
+					
+				});
+			});
+			</script>
 </div>
 										
 										

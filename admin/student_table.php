@@ -21,7 +21,7 @@
 					<th></th>
 				
 					<th>Name</th>
-					<th>ID Number</th>
+					<th>E-mail</th>
 			
 					<th>Course Yr & Section</th>
 					<th></th>

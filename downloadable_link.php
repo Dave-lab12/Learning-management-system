@@ -7,8 +7,6 @@
 				<li  style="padding:10px"class="active"><a href="downloadable.php<?php echo '?id='.$get_id; ?>"style="text-decoration: none;color:white;font-family:Sans-serif;font-size:16px"><i class="icon-download"></i>&nbsp;Downloadable Materials</a></li>
 				<li  style="padding:10px"class=""><a href="assignment.php<?php echo '?id='.$get_id; ?>"style="text-decoration: none;color:white;font-family:Sans-serif;"><i class="icon-book"></i>&nbsp;Assignments</a></li>
 				<li  style="padding:10px"class=""><a href="announcements.php<?php echo '?id='.$get_id; ?>"style="text-decoration: none;color:white;font-family:Sans-serif;"><i class="icon-info-sign"></i>&nbsp;Announcements</a></li>
-				<li  style="padding:10px"class=""><a href="class_calendar.php<?php echo '?id='.$get_id; ?>"style="text-decoration: none;color:white;font-family:Sans-serif;"><i class="icon-calendar"></i>&nbsp;Class Calendar</a></li>
-			    <li  style="padding:10px"class=""><a href="class_quiz.php<?php echo '?id='.$get_id; ?>"style="text-decoration: none;color:white;font-family:Sans-serif;"><i class="icon-list"></i>&nbsp;Quiz</a></li>
 			</ul>
 				
 </div>

@@ -1,20 +1,20 @@
 <?php include('header_dashboard.php'); ?>
 <?php include('session.php'); ?>
 <?php $get_id = $_GET['id']; ?>
-    <body>
+    <body style="background-image: linear-gradient(to top,#cfd9df,#e2ebf0)">
 		<?php include('navbar_teacher.php'); ?>
         <div class="container-fluid">
             <div class="row-fluid">
 				<?php include('class_sidebar.php'); ?>
                 <div class="span9" id="content">
-                     <div class="row-fluid">
+                     <div class="row-fluid" style="margin-left: 25px;">
 						<div class="pull-right">
 						
 							<a id="print" onclick="window.print()"  class="btn btn-success"><i class="icon-print"></i> Print Student List</a>
 						</div>
 						<?php include('my_students_breadcrums.php'); ?>
                         <!-- block -->
-                        <div id="block_bg" class="block">
+                        <div id="block_bg" class="block" style="box-shadow: none;">
                             <div class="navbar navbar-inner block-header">
                                 <div id="" class="muted pull-right">
 					

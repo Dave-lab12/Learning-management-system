@@ -29,18 +29,7 @@
 						<li style="padding:10px">
                             <a href="content.php"style="text-decoration: none;color:white;font-family:Sans-serif;"><i class="icon-file"></i> Content</a>
                         </li>
-						<li style="padding:10px">
-                            <a href="user_log.php"style="text-decoration: none;color:white;font-family:Sans-serif;"><i class="icon-file"></i> User Log</a>
-                        </li>
-						<li style="padding:10px">
-                            <a href="activity_log.php"style="text-decoration: none;color:white;font-family:Sans-serif;"><i class="icon-file"></i> Activity Log</a>
-                        </li>
-						<li style="padding:10px">
-                            <a href="school_year.php"style="text-decoration: none;color:white;font-family:Sans-serif;"><i class="icon-calendar"></i> School Year</a>
-                        </li>
-						<li style="padding:10px" class="">
-                            <a href="calendar_of_events.php"style="text-decoration: none;color:white;font-family:Sans-serif;"><i class="icon-calendar"></i>Calendar of Events</a>
-                        </li>
+						
                     </ul>
 					
 					

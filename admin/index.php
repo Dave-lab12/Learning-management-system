@@ -17,7 +17,7 @@
 						In</span></button>	
 						</div>
 		<div  id="b_5_banner1_320059260" class="js-bnfy">
-		<a href="#">	<img id="img_5_banner1_320059260" class="bnfy-enter" alt="Forgot Password?" width="134" height="24" src="./assets/admin-sign-in/images/forgot-password_557641254.svg"/></a>
+		<a href="../admin_reset.php">	<img id="img_5_banner1_320059260" class="bnfy-enter" alt="Forgot Password?" width="134" height="24" src="./assets/admin-sign-in/images/forgot-password_557641254.svg"/></a>
 		</div>
 		<div  id="b_6_banner1_320059260" class="js-bnfy">
 			<img id="img_6_banner1_320059260" class="bnfy-enter" alt="Rectangle 5" width="1440" height="108" src="./assets/admin-sign-in/images/rectangle-5_974363979.svg"/>

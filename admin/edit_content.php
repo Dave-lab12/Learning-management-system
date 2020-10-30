@@ -1,16 +1,16 @@
 <?php include('header.php'); ?>
 <?php include('session.php'); ?>
 <?php $get_id = $_GET['id']; ?>
-    <body>
+    <body  style="background-image: linear-gradient(to top,#cfd9df,#e2ebf0)">
 		<?php include('navbar.php'); ?>
         <div class="container-fluid">
             <div class="row-fluid">
 				<?php include('content_sidebar.php'); ?>
                 <div class="span9" id="content">
-                     <div class="row-fluid">
+                     <div class="row-fluid" style="margin-left: 25px;">
 					 <a href="" class="btn btn-info"><i class="icon-plus-sign icon-large"></i> Add Content</a>
 							<!-- block -->
-		                        <div class="block">
+		                        <div class="block" style="box-shadow: none;">
 		                            <div class="navbar navbar-inner block-header">
 		                                <div class="muted pull-left">Edit Content</div>
 		                            </div>
@@ -28,17 +28,22 @@
 										<input type="text" name="title" id="inputEmail" placeholder="Title" value="<?php echo $row['title']; ?>">
 										</div>
 										</div>
-										
+									
 												<div class="control-group">
 										<label class="control-label" for="inputPassword">Content</label>
 										<div class="controls">
 												<textarea name="content" id="ckeditor_full">
 												<?php echo $row['content']; ?>
 												</textarea>
+												<script src="../ckeditor/ckeditor.js"></script>
+		<script>
+			CKEDITOR.replace("contentt")
+		</script>	
 										</div>
+										
 										</div>
 												
-																		
+													
 											
 										<div class="control-group">
 										<div class="controls">
@@ -70,7 +75,7 @@
 
                 </div>
             </div>
-		<?php include('footer.php'); ?>
+		
         </div>
 		<?php include('script.php'); ?>
     </body>

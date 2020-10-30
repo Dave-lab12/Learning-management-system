@@ -13,8 +13,6 @@
 		<li style="padding:10px"class=""><a href="add_downloadable.php"style="text-decoration: none;color:white;font-family:Sans-serif;"><i class="icon-plus-sign"></i>&nbsp;Add Downloadables</a></li> 
 		<li style="padding:10px"class=""><a href="add_announcement.php"style="text-decoration: none;color:white;font-family:Sans-serif;"><i class="icon-plus-sign"></i>&nbsp;Add Announcement</a></li> 
 		<li style="padding:10px"class=""><a href="add_assignment.php"style="text-decoration: none;color:white;font-family:Sans-serif;"><i class="icon-plus-sign"></i>&nbsp;Add Assignment</a></li>
-		<li style="padding:10px"class=""><a href="teacher_quiz.php"style="text-decoration: none;color:white;font-family:Sans-serif;"><i class="icon-list"></i>&nbsp;Quiz</a></li>
-		<li style="padding:10px"class=""><a href="teacher_share.php"style="text-decoration: none;color:white;font-family:Sans-serif;"><i class="icon-file"></i>&nbsp;Shared Files</a></li>
 	</ul>
 
 </div>

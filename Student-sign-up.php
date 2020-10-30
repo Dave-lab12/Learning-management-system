@@ -94,10 +94,10 @@
 		<a href="#">	<img id="img_21_banner4_948223658" class="bnfy-enter" alt="Login" width="56" height="26" src="../U-learn experimental/admin/assets/student-sign-up/images/login_171544297.svg"/></a>
 		</div>
 		<div  id="b_22_banner4_948223658" class="js-bnfy">
-		<a href="#">	<img id="img_22_banner4_948223658" class="bnfy-enter" alt="Teacher" width="86" height="28" src="../U-learn experimental/admin/assets/student-sign-up/images/teacher_339841965.svg"/></a>
+		<a href="teacher-sign-in.php">	<img id="img_22_banner4_948223658" class="bnfy-enter" alt="Teacher" width="86" height="28" src="../U-learn experimental/admin/assets/student-sign-up/images/teacher_339841965.svg"/></a>
 		</div>
 		<div  id="b_23_banner4_948223658" class="js-bnfy">
-		<a href="#">	<img id="img_23_banner4_948223658" class="bnfy-enter" alt="Adminstrator" width="132" height="28" src="../U-learn experimental/admin/assets/student-sign-up/images/adminstrator_935578553.svg"/></a>
+		<a href="admin/admin">	<img id="img_23_banner4_948223658" class="bnfy-enter" alt="Adminstrator" width="132" height="28" src="../U-learn experimental/admin/assets/student-sign-up/images/adminstrator_935578553.svg"/></a>
 		</div>
 		<div  id="b_24_banner4_948223658" class="js-bnfy">
 		<a href="#">	<img id="img_24_banner4_948223658" class="bnfy-enter" alt="Sign Up" width="74" height="26" src="../U-learn experimental/admin/assets/student-sign-up/images/sign-up_802628407.svg"/></a>

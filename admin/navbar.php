@@ -21,8 +21,12 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a tabindex="-1" href="#">Profile</a>
+                                        <a tabindex="-1" href="change_password_admin.php">Change Password</a>
                                     </li>
+                                    <li>
+                                        <a tabindex="-1" href="profile_admin.php">Profile</a>
+                                    </li>
+                                    
                                     <li class="divider"></li>
                                     <li>
                                         <a tabindex="-1" href="logout.php"><i class="icon-signout"></i>&nbsp;Logout</a>

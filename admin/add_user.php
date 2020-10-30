@@ -46,12 +46,12 @@
 					
 					<?php
 if (isset($_POST['save'])){
-$firstname = $_POST['firstname'];
-$lastname = $_POST['lastname'];
-$username = $_POST['username'];
-$password = $_POST['password'];
+$firstname = htmlspecialchars( mysqli_real_escape_string($conn,$_POST['firstname']));
+$lastname = htmlspecialchars( mysqli_real_escape_string($conn,$_POST['lastname']));
+$username = htmlspecialchars( mysqli_real_escape_string($conn,$_POST['username']));
+$password = htmlspecialchars( mysqli_real_escape_string($conn,$_POST['password']));
 
-
+$hash = password_hash($password, PASSWORD_BCRYPT);
 $query = mysqli_query($conn, "select * from users where username = '$username' and password = '$password' and firstname = '$firstname' and password = '$password' ")or die(mysqli_error());
 $count = mysqli_num_rows($query);
 
@@ -61,7 +61,7 @@ alert('Data Already Exist');
 </script>
 <?php
 }else{
-mysqli_query($conn, "insert into users (username,password,firstname,lastname) values('$username','$password','$firstname','$lastname')")or die(mysqli_error());
+mysqli_query($conn, "insert into users (username,password,firstname,lastname) values('$username','$hash','$firstname','$lastname')")or die(mysqli_error());
 
 mysqli_query($conn, "insert into activity_log (date,username,action) values(NOW(),'$user_username','Add User $username')")or die(mysqli_error());
 ?>

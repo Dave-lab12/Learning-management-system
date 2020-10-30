@@ -1,12 +1,12 @@
 <?php include('header_dashboard.php'); ?>
 <?php include('session.php'); ?>
-    <body>
+    <body style="background-image: linear-gradient(to top,#cfd9df,#e2ebf0)">
 		<?php include('navbar_teacher.php'); ?>
         <div class="container-fluid">
             <div class="row-fluid">
 				<?php include('change_password_sidebar.php'); ?>
                 <div class="span9" id="content">
-                     <div class="row-fluid">
+                     <div class="row-fluid" style="margin-left: 25px;">
 					    <!-- breadcrumb -->	
 					     <ul class="breadcrumb">
 								<?php
@@ -20,7 +20,7 @@
 						 <!-- end breadcrumb -->
 					 
                         <!-- block -->
-                        <div id="block_bg" class="block">
+                        <div id="block_bg" class="block" style="box-shadow: none;">
                             <div class="navbar navbar-inner block-header">
                                 <div id="" class="muted pull-left"></div>
                             </div>
@@ -33,13 +33,7 @@
 								?>								
 										
 								    <form  method="post" id="change_password" class="form-horizontal">
-										<div class="control-group">
-											<label class="control-label" for="inputEmail">Current Password</label>
-											<div class="controls">
-											<input type="hidden" id="password" name="password" value="<?php echo $row['password']; ?>"  placeholder="Current Password">
-											<input type="password" id="current_password" name="current_password"  placeholder="Current Password">
-											</div>
-										</div>
+									
 										<div class="control-group">
 											<label class="control-label" for="inputPassword">New Password</label>
 											<div class="controls">
@@ -63,17 +57,12 @@
 			jQuery(document).ready(function(){
 			jQuery("#change_password").submit(function(e){
 					e.preventDefault();
-						
-						var password = jQuery('#password').val();
-						var current_password = jQuery('#current_password').val();
+					
 						var new_password = jQuery('#new_password').val();
 						var retype_password = jQuery('#retype_password').val();
-						if (password != current_password)
-						{
-						$.jGrowl("Password does not match with your current password  ", { header: 'Change Password Failed' });
-						}else if  (new_password != retype_password){
+						 if  (new_password != retype_password){
 						$.jGrowl("Password does not match with your new password  ", { header: 'Change Password Failed' });
-						}else if ((password == current_password) && (new_password == retype_password)){
+						}else{
 					var formData = jQuery(this).serialize();
 					$.ajax({
 						type: "POST",
@@ -107,7 +96,7 @@
                 </div>
 	
             </div>
-		<?php include('footer.php'); ?>
+		
         </div>
 		<?php include('script.php'); ?>
     </body>
